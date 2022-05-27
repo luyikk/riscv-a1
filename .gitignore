@@ -1,2 +1,4 @@
 /target
 /Cargo.lock
+/core/Cargo.lock
+/core/.idea/
