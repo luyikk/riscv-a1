@@ -1,2 +1,7 @@
-[build]
-target="riscv64gc-unknown-none-elf"
+
+[alias]
+xbuild="build --package a1 --bin a1 --target riscv64gc-unknown-none-elf --release"
+qrun="run --package qemu-run --bin qemu-run -- -l ./target/riscv64gc-unknown-none-elf/release/a1"
+
+[target.riscv64gc-unknown-none-elf]
+rustflags = ["-Clink-arg=-Tcore/src/linker.ld", "-Cforce-frame-pointers=yes"]
